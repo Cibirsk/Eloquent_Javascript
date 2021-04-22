@@ -1,6 +1,6 @@
 function sumNbr(nbr){
     let count= nbr;
-    let total;
+    let total=0;
     while(count>0){
         total += count;
         count--;
@@ -8,4 +8,4 @@ function sumNbr(nbr){
     return total;
 }
 
-console.log(sumNbr(10));
+console.log(sumNbr(15));
