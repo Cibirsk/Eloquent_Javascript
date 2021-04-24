@@ -1,11 +1,28 @@
 //console.log("test retourR\nRligne");
 
 let myBoard="";
-for(let i=0;i<8;i++){
-    if(i%2 == 0){
+for(let i=0;i<64;i++){
+    if(i%2 == 0  &&  i%9 != 0){
         myBoard += " ";
-    }else{
+    }else if(i%2 != 0  &&  i%9 != 0){
         myBoard += "#";
     }
 }
 console.log(myBoard);
+
+/*
+
+0#0#0#0#\n#0#0#0#0\n0#0#0#0#\n
+
+0
+!
+0
+!
+0
+!
+0
+!   non modulo 0
+%9  modulo 9
+!   non modulo 0
+
+*/
