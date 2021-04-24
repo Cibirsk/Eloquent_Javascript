@@ -1,22 +1,33 @@
-/*
 let myBoard="";
-for(let i=0;i<80;i++){
-    if(i%2 == 0  &&  i%9 != 0){
-        myBoard += "  ";
-    }else if(i%2 != 0  &&  i%9 != 0){
-        myBoard += "#";
-    }else if(i%9 == 0){
-        myBoard += "\n";
-        i++;
+let impLine="";
+let pairLine="";
+let mySize = prompt("size: ");
+
+for(let i=0;i<mySize;i++){
+    if(i%2 == 0){
+        pairLine += "  ";
+    }else{
+        pairLine += "#";
     }
-} */
+}
+pairLine += "\n";
 
-let myBoard="";
-let impBoard="";
-let pairBoard="";
+for(let i=0;i<mySize;i++){
+    if(i%2 == 0){
+        impLine += "#";
+    }else{
+        impLine += "  ";
+    }
+}
+impLine += "\n";
 
-
-
+for(let i=0;i<mySize;i++){
+    if(i%2 == 0){
+        myBoard += pairLine;
+    }else{
+        myBoard += impLine;
+    }
+}
 
 console.log(myBoard);
 
