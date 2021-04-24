@@ -1,3 +1,4 @@
+/*
 let myBoard="";
 let impLine="";
 let pairLine="";
@@ -30,11 +31,11 @@ for(let i=0;i<mySize;i++){
 }
 
 console.log(myBoard);
+*/
+
 
 /*
-
 0#0#0#0#\n#0#0#0#0\n0#0#0#0#\n
-
 0
 !
 0
@@ -45,5 +46,4 @@ console.log(myBoard);
 !   non modulo 0
 %9  modulo 9   (retour ligne et sauter une boucle)
 !   non modulo 0
-
 */
