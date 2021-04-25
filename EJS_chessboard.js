@@ -1,49 +1,31 @@
-/*
-let myBoard="";
-let impLine="";
-let pairLine="";
-let mySize = prompt("size: ");
-
-for(let i=0;i<mySize;i++){
-    if(i%2 == 0){
-        pairLine += "  ";
-    }else{
-        pairLine += "#";
+let chessboard="";
+for(let j=0;j<4;j++){
+    for(let i=0;i<4;i++){
+        chessboard += "  #";
     }
+    chessboard += "\n";
+
+    for(let i=0;i<4;i++){
+        chessboard += "#  ";
+    }
+    chessboard += "\n";
 }
-pairLine += "\n";
+console.log(chessboard);
 
-for(let i=0;i<mySize;i++){
-    if(i%2 == 0){
-        impLine += "#";
-    }else{
-        impLine += "  ";
-    }
-}
-impLine += "\n";
 
-for(let i=0;i<mySize;i++){
-    if(i%2 == 0){
-        myBoard += pairLine;
-    }else{
-        myBoard += impLine;
+//solution du livre
+let size = 8;
+let board = "";
+
+for (let y = 0; y < size; y++) {
+  for (let x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0) {
+      board += " ";
+    } else {
+      board += "#";
     }
+  }
+  board += "\n";
 }
 
-console.log(myBoard);
-*/
-
-
-/*
-0#0#0#0#\n#0#0#0#0\n0#0#0#0#\n
-0
-!
-0
-!
-0
-!
-0
-!   non modulo 0
-%9  modulo 9   (retour ligne et sauter une boucle)
-!   non modulo 0
-*/
+console.log(board);
