@@ -1,18 +1,16 @@
-const hummus = function(factor) {
-    const ingredient = function(amount, unit, name) {
-        let ingredientAmount = amount * factor;
-        if (ingredientAmount > 1) {
-            unit += "s";
-        }
-        console.log(`${ingredientAmount} ${unit} ${name}`);
+function compteur() {
+    let count = 0;
+  
+    return function() {
+        return count++;
     };
+}
 
-    ingredient(1, "can", "chickpeas");
-    ingredient(0.25, "cup", "tahini");
-    ingredient(0.25, "cup", "lemon juice");
-    ingredient(1, "clove", "garlic");
-    ingredient(2, "tablespoon", "olive oil");
-    ingredient(0.5, "teaspoon", "cumin");
-};
+let plusUn = compteur();
+let plusUnBis = compteur();
 
-hummus(1);
+alert(plusUn()); //0 
+alert(plusUn()); //1
+alert(plusUnBis()); //0
+alert(plusUn()); //2
+alert(plusUnBis()); //1
